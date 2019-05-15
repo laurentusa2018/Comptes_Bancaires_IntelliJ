@@ -5,6 +5,12 @@ public class CompteBancaire {
     public double solde;
     public String devise;
 
+    public CompteBancaire(String titulaire, double leSolde, String laDevise) {
+        this.titulaire = titulaire;
+        solde = leSolde;
+        devise = laDevise;
+    }
+
     public void Crediter(double montant) {
         solde += montant;
     }
@@ -13,9 +19,9 @@ public class CompteBancaire {
         solde -= montant;
     }
 
-    public String Situation(){
-        String description = "Le solde de "+this.titulaire+" est de "+this.solde+
-                " "+this.devise;
+    public String Situation() {
+        String description = "Le solde de " + this.titulaire + " est de " + this.solde +
+                " " + this.devise;
         return description;
     }
 }
