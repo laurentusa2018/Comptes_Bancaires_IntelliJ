@@ -6,14 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        CompteBancaire comptePierre = new CompteBancaire("Pierre", 500 ,"euros");
+        CompteBancaire comptePierre = new CompteBancaire("Pierre", 500, "euros");
 /**
  *  Sans le constructeur
-        comptePierre.titulaire = "Pierre";
-        comptePierre.solde = 500;
-        comptePierre.devise = "euros";
-*/
-        CompteBancaire comptePaul = new CompteBancaire("Paul",150,"euros");
+ comptePierre.titulaire = "Pierre";
+ comptePierre.solde = 500;
+ comptePierre.devise = "euros";
+ */
+        CompteBancaire comptePaul = new CompteBancaire("Paul", 150, "euros");
 /** Sans le constructeur
  * comptePaul.titulaire = "Paul";
  *         comptePaul.solde = 150;
@@ -21,6 +21,13 @@ public class Main {
  */
 
 
+        System.out.println(comptePierre.Situation());
+        System.out.println(comptePaul.Situation());
+        System.out.println();
+
+        comptePaul.setSolde(comptePaul.getSolde()-20);
+        System.out.println(comptePaul.getDevise()+" "+comptePaul.getSolde());
+        comptePaul.setDevise("livres");
         System.out.println(comptePierre.Situation());
         System.out.println(comptePaul.Situation());
         System.out.println();
