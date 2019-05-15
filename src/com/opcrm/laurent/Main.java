@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         CompteBancaire comptePierre = new CompteBancaire("Pierre", 500, "euros");
+        CompteEpargne compteAnne = new CompteEpargne("Anne",1000,"euros",0.05);
 /**
  *  Sans le constructeur
  comptePierre.titulaire = "Pierre";
@@ -24,9 +25,10 @@ public class Main {
         System.out.println(comptePierre.Situation());
         System.out.println(comptePaul.Situation());
         System.out.println();
-
+        System.out.println("On débite 20 à Paul");
         comptePaul.setSolde(comptePaul.getSolde()-20);
-        System.out.println(comptePaul.getDevise()+" "+comptePaul.getSolde());
+        System.out.println("en: "+comptePaul.getDevise()+", il y a: "+comptePaul.getSolde()+
+                " pour: "+comptePaul.getTitulaire());
         comptePaul.setDevise("livres");
         System.out.println(comptePierre.Situation());
         System.out.println(comptePaul.Situation());

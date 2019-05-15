@@ -2,7 +2,7 @@ package com.opcrm.laurent;
 
 public class CompteBancaire {
     private String titulaire;
-    private double solde;
+    protected double solde;
     private String devise;
 
     public CompteBancaire(String titulaire, double solde, String laDevise) {
@@ -31,6 +31,11 @@ public class CompteBancaire {
      * Mise en place des accésseurs
      * @return
      */
+
+    public String getTitulaire(){
+        return titulaire;
+    }
+
 
     public String getDevise() {
         return devise;
