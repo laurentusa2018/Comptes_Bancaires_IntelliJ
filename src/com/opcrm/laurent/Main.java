@@ -24,7 +24,9 @@ public class Main {
 
         System.out.println(comptePierre.Situation());
         System.out.println(comptePaul.Situation());
+        System.out.println(compteAnne.Situation()+" avec une épargne à: "+compteAnne.getTaux());
         System.out.println();
+
         System.out.println("On débite 20 à Paul");
         comptePaul.setSolde(comptePaul.getSolde()-20);
         System.out.println("en: "+comptePaul.getDevise()+", il y a: "+comptePaul.getSolde()+
@@ -32,6 +34,8 @@ public class Main {
         comptePaul.setDevise("livres");
         System.out.println(comptePierre.Situation());
         System.out.println(comptePaul.Situation());
+        compteAnne.AjouterInterets();
+        System.out.println(compteAnne.Situation());
         System.out.println();
 
         System.out.print("Entrer le montant du transfert de Pierre à Paul: ");
